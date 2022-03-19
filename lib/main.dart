@@ -15,19 +15,18 @@ class MyApp extends StatelessWidget {
     String name = "Tejaswi";
 
     return MaterialApp(
-      themeMode: ThemeMode.light,
-      theme: ThemeData(
-        fontFamily: GoogleFonts.lato().fontFamily,
-        primaryTextTheme: GoogleFonts.latoTextTheme(),
-      ),
-      darkTheme: ThemeData(
-        primarySwatch: Colors.deepOrange
-      ),
-      initialRoute: "/login",
-      routes: {
-        MyRoutes.homeRoute: (context) => HomePage(),
-        MyRoutes.loginRoute: (context) => LoginPage()
-      }
-    );
+        themeMode: ThemeMode.light,
+        theme: ThemeData(
+          fontFamily: GoogleFonts.lato().fontFamily,
+          primaryTextTheme: GoogleFonts.latoTextTheme(),
+          primarySwatch: Colors.deepPurple,
+        ),
+        debugShowCheckedModeBanner: false,
+        darkTheme: ThemeData(primarySwatch: Colors.deepOrange),
+        initialRoute: MyRoutes.homeRoute,
+        routes: {
+          MyRoutes.homeRoute: (context) => HomePage(),
+          MyRoutes.loginRoute: (context) => LoginPage()
+        });
   }
 }
